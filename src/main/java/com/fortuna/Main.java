@@ -27,16 +27,21 @@ public class Main {
         System.out.println(in.readLine());
         out.println("Versione client: 0.9");
 
-        System.out.println("Inserisci primo numero");
-        out.println(scan.nextLine());
-
-        System.out.println("Inserisci secondo numero");
-        out.println(scan.nextLine());
-
-        System.out.println("Inserisci operazione (1=+,2=-,3=/,4=*)");
-        out.println(scan.nextLine());
-
-        System.out.println("Risultato: " + in.readLine());
+        String op;
+        do {
+            System.out.println("Inserisci primo numero");
+            out.println(scan.nextLine());
+    
+            System.out.println("Inserisci secondo numero");
+            out.println(scan.nextLine());
+    
+            System.out.println("Inserisci operazione (1=+,2=-,3=/,4=*)");
+            op = scan.nextLine();
+            out.println(op);
+    
+            System.out.println("Risultato: " + in.readLine());
+            
+        } while (!op.equals("0"));
 
         mioSocket.close();
         scan.close();
